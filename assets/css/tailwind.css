@@ -1,0 +1,226 @@
+@tailwind base;
+@tailwind components;
+.active-btn {
+  @apply flex w-20 justify-center gap-2 rounded-full bg-[#ebf1fd] px-2 py-1 text-[12px]  font-medium text-[#2385ba] dark:bg-[#181818];
+}
+.onboarding-btn {
+  @apply flex w-2/3 justify-center gap-2 rounded-full bg-[#fff2dd] px-6 py-1 text-center text-[12px] font-medium text-[#F4A118] dark:bg-[#402800];
+}
+.input-select {
+  @apply w-2/3 rounded-md border-none  bg-[#f1f5f9] text-gray-400 dark:bg-[#171717] dark:font-medium;
+}
+.input-text {
+  @apply w-full rounded-md border-[#2385BA] placeholder:font-bold placeholder:text-black dark:bg-black dark:placeholder:text-white;
+}
+
+.input-text-campus {
+  @apply mb-2 w-full rounded-md border-[#2385BA]  placeholder:text-black dark:bg-black dark:placeholder:text-white;
+}
+.save-btn {
+  @apply m-2 rounded-md bg-[#2385ba] px-8 py-2 font-bold text-white shadow-lg;
+}
+.cancel-btn {
+  @apply m-2 rounded-md bg-white px-8 py-2 font-bold text-black shadow-lg dark:border dark:bg-black dark:text-white;
+}
+.skyblue-btn {
+  @apply flex
+    items-center gap-2 rounded-full bg-[#ebf1fd] px-4 py-1 text-[12px] font-medium text-[#2385BA] dark:bg-[#181818];
+}
+.green-btn {
+  @apply flex
+    items-center gap-2 rounded-full bg-[#ecfdf5] px-4 py-1 text-[12px] font-medium text-[#1dbd88] dark:bg-[#181818];
+}
+.purple-btn {
+  @apply flex
+    items-center gap-2 rounded-full bg-[#F5F3FF] px-4 py-1 text-[12px] font-medium text-[#5B21B6] dark:bg-[#181818];
+}
+.yellow-btn {
+  @apply flex justify-center gap-2 rounded-full  bg-[#fff0d8] text-[14px] text-[#F4A118] dark:bg-[#402800];
+}
+
+.table-text {
+  @apply text-[14px]   text-[#5F5F61] dark:text-white;
+}
+.present {
+  @apply inline-block gap-1  rounded-full bg-[#e8f6ed] px-2 py-1 dark:bg-[#102919];
+}
+.absent {
+  @apply inline-block gap-1 rounded-full bg-[#fceaea] px-2 py-1 dark:bg-[#191919];
+}
+.late {
+  @apply inline-block gap-1 rounded-full bg-[#e8f6ed] px-2 py-1 dark:bg-[#402800];
+}
+.half-day {
+  @apply inline-block gap-1 rounded-full bg-[#ebf1fd] px-2 py-1 dark:bg-[#191919];
+}
+@tailwind utilities;
+
+.view-btn {
+  @apply rounded-full border-2 border-[#105DFB] bg-[#ebf1fd] px-4 text-[12px] font-medium text-[#105DFB];
+}
+
+.employee-btn {
+  @apply rounded-md bg-[#e2e8f0] px-5 py-2 text-[16px]
+text-[#64748B] dark:bg-[#18212e] dark:text-white;
+}
+.btn-viloate {
+  @apply rounded-md bg-[#2385BA] px-4 py-2 text-[14px] font-normal text-white;
+}
+
+.global-btn {
+  @apply rounded-md
+bg-[#2385ba] px-4
+py-2
+text-white;
+}
+.premium-btn {
+  background: var(
+    --linear-2,
+    linear-gradient(90deg, #15aaff -4.92%, #adf7f2 118.37%)
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.red-btn {
+  @apply rounded-md border border-[#E73F3F] bg-white px-4 py-2 text-center text-[14px] font-normal text-[#E73F3F]
+dark:bg-[#111827];
+}
+.download-btn {
+  @apply rounded-full border-2 border-[#222124] bg-[#EBF1FD] px-4 py-1 text-[12px] font-medium text-[#222124] dark:border-white dark:bg-[#181818] dark:text-white;
+}
+.approved-btn {
+  @apply rounded-full
+bg-[#EBF1FD] px-4 py-1 text-[12px] font-medium text-[#01A63E] dark:bg-[#181818];
+}
+.pending-btn {
+  @apply rounded-full bg-[#EBF1FD] px-4 py-1 text-[12px] font-medium text-[#105DFB];
+}
+
+.red-btn {
+  @apply rounded-md border border-[#E73F3F] bg-white px-4 py-2 text-center text-[14px] font-normal text-[#E73F3F];
+}
+.popup-cancelbtn {
+  @apply rounded-md border bg-white px-4 py-2 text-center font-normal text-black dark:bg-black dark:text-white;
+}
+.popup-savebtn {
+  @apply rounded-md border-[1px] bg-[#2385ba] px-5 py-2 font-normal text-white dark:border-none  dark:text-black;
+}
+.popup-confirmbtn {
+  @apply rounded-md bg-red-600 px-5 py-2 font-normal  text-white dark:bg-red-600 dark:text-black;
+}
+
+.font-inter {
+  font-family: "Inter, sans-serif";
+}
+.font-poppins {
+  font-family: "Poppins, sans-serif";
+}
+
+.active .button-active {
+  @apply bg-gray-100 dark:bg-[#161616];
+}
+
+/* text editor  */
+
+.text-card-ke3ld .p-editor-toolbar.ql-toolbar.ql-snow {
+  position: relative;
+  top: 300px;
+  z-index: 1;
+  margin-left: 20px;
+  margin-right: 20px;
+  border: none;
+  box-shadow: 6px 10px 25px 0px rgba(148, 163, 184, 0.2);
+}
+.dark .text-card-ke3ld .p-editor-toolbar.ql-toolbar.ql-snow {
+  background: #171717;
+  box-shadow: 6px 10px 25px 0px rgb(54 54 54 / 20%);
+  border: 1px solid #262626;
+}
+.dark .p-editor-container .p-editor-content .ql-editor {
+  background: #171717;
+  color: #fff;
+}
+.dark .ql-editor.ql-blank::before {
+  color: #fff;
+}
+.ql-toolbar.ql-snow + .ql-container.ql-snow {
+  border-top: 1px solid #e5e7eb;
+}
+.dark .ql-toolbar.ql-snow + .ql-container.ql-snow {
+  border-top: 1px solid #262626;
+}
+.dark .p-editor-container .p-editor-content.ql-snow {
+  border: 1px solid #262626;
+}
+
+/* multiselect  */
+.multiselect-nk3d {
+  background: #fff;
+  box-shadow: 8px 8px 50px 0px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  border-radius: 0;
+}
+
+.dark .multiselect-nk3d {
+  background: #1e1e1e;
+  color: #fff;
+}
+.multiselect-nk3d .p-multiselect-header {
+  background: rgba(35, 133, 186, 0.2);
+  height: 50px;
+  border-radius: 0;
+}
+.multiselect-nk3d .p-multiselect-header .p-checkbox-box {
+  border-radius: 0;
+}
+.dark .multiselect-nk3d .p-multiselect-label.p-placeholder {
+  color: #fff;
+}
+.multiselect-nk3d
+  .p-multiselect-header
+  input.p-multiselect-filter.p-inputtext.p-component {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.multiselect-nk3d .p-multiselect-item.p-highlight {
+  background: rgba(148, 163, 184, 0.2);
+  min-height: 50px;
+}
+
+.multiselect-nk3d .p-multiselect-item {
+  gap: 11px;
+  border-top: 1px solid rgba(29, 29, 29, 0.2);
+}
+.dark .multiselect-nk3d .p-multiselect-item {
+  color: #fff;
+}
+.dark .multiselect-nk3d .p-multiselect-item:hover {
+  background: #3a3a3a;
+  color: #fff;
+}
+.dark .multiselect-nk3d .p-multiselect-item.p-focus {
+  background: #3a3a3a;
+}
+
+.multiselect-nk3d .p-multiselect-item:first-child {
+  margin-top: 10px;
+}
+
+.multiselect-nk3d .p-multiselect-item .p-checkbox-box {
+  border-radius: 0;
+  transform: scale(1.2);
+  background: rgba(228, 228, 228, 0.8);
+}
+.multiselect-nk3d .p-multiselect-item.p-highlight .p-checkbox-box.p-highlight {
+  background: #2795cf;
+}
+.multiselect-nk3d .p-multiselect-item.p-highlight .p-checkbox.p-component {
+  margin-left: 10px;
+}
+.vue3-easy-data-table__header th[data-v-32683533] {
+  background-color: #2385ba !important;
+  color: #fff !important;
+}

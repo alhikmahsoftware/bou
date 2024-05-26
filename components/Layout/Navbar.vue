@@ -202,6 +202,7 @@ const handleOptionClick = (option) => {
       display: flex;
       justify-content: center;
       justify-content: space-between;
+      margin-bottom: 0;
       li {
         margin-right: 7px;
         padding-right: 18px;

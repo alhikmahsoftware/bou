@@ -10,8 +10,11 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@bootstrap-vue-next/nuxt": "^0.18.0",
     "@pinia-plugin-persistedstate/nuxt": "^1.2.0",
     "autoprefixer": "^10.4.17",
+    "bootstrap": "^5.3.3",
+    "bootstrap-vue-next": "^0.18.0",
     "nuxt": "^3.9.3",
     "nuxt-icon": "^0.6.8",
     "nuxt-primevue": "^0.2.2",

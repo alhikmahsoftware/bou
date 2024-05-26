@@ -18,7 +18,7 @@
       >
     </button>
 
-    <div class="flex gap-5 max-w-screen-xl mx-auto py-5 px-4 xl:px-[unset]">
+    <div class="flex gap-5 max-w-screen-xl mx-auto py-5 px-4 xl:px-[unset] prr">
       <!-- buttons on large screen -->
       <div class="w-[20%] z-[1000] px-2 hidden lg:block">
         <div
@@ -30,7 +30,7 @@
             :key="index"
             @click="setScl(button.id, index)"
             :class="[
-              'py-3  text-sm hover:bg-lightblue/70 rounded-md',
+              'py-3  text-sm hover:bg-lightblue/70 rounded-md dropdown-btn',
               {
                 ' bg-lightblue text-white': btnStyleIndex === index,
               },
@@ -58,17 +58,16 @@
             <!-- Dropdown for departments -->
             <div
               id="dropdown"
-              class="absolute bg-gray-100 text-black min-w-[300px] rounded-md text-sm border cursor-default"
-              v-if="selected_scl === button.id && button.departments.length > 0"
+              class="absolute bg-gray-100 text-black min-w-[300px] rounded-md text-sm border cursor-default dropdown-departments"
             >
-              <div class="flex justify-end">
+              <!-- <div class="flex justify-end">
                 <button
                   id="dropdown"
                   class="p-2 px-4 bg-lightblue hover:bg-lightestblue duration-200 text-white rounded"
                 >
                   <Icon name="mingcute:close-fill" class="text-xl" />
                 </button>
-              </div>
+              </div> -->
               <ul class="p-3 text-start text-sm flex flex-col gap-3 mt-2">
                 <li
                   v-for="(department, index) in button.departments"
@@ -85,7 +84,9 @@
         </div>
       </div>
       <!-- vdo frame -->
-      <div class="flex flex-col gap-6 relative z-10 px-4 xl:px-[unset] w-[80%]">
+      <div
+        class="flex flex-col gap-6 relative z-10 px-4 prr xl:px-[unset] w-[80%]"
+      >
         <iframe
           v-if="vdoPlay"
           :src="vdoPlay"
@@ -108,7 +109,7 @@
         <!-- thumbnail -->
         <div
           v-else
-          class="grid md:grid-cols-3 lg:grid-cols-4 grid-cols-2 gap-4"
+          class="grid md:grid-cols-3 lg:grid-cols-4 grid-cols-2 ga-pr gap-4"
         >
           <button
             @click="setVdoPlay(vdo.embedded_url)"
@@ -221,7 +222,23 @@ onMounted(() => {
 });
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+.dropdown-btn {
+  position: relative;
+  .dropdown-departments {
+    display: none;
+    top: 0;
+    left: 200px;
+  }
+  &:hover {
+    background-color: #003a7e;
+    color: #ffffff;
+    .dropdown-departments {
+      display: block;
+    }
+  }
+}
+
 /* Max width 767px */
 @media only screen and (max-width: 767px) {
   .bg-no-repeat {
@@ -230,7 +247,17 @@ onMounted(() => {
     padding-top: 2rem;
   }
   .py-5 {
-    padding-bottom: 0;
+    padding-bottom: 0 !important;
+  }
+  .prr {
+    &.px-4 {
+      padding-right: 0 !important;
+    }
+  }
+  .ga-pr {
+    .gap-4 {
+      gap: 0.5rem !important;
+    }
   }
 }
 </style>

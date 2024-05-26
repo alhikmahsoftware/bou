@@ -30,36 +30,73 @@
         <!-- btn text -->
         <div
           :class="[
-            'flex justify-between items-center px-5   flex-grow',
+            'flex justify-between items-center px-5 btn-pr flex-grow',
             { ' duration-200': btnStyleIndex === index },
           ]"
         >
-          <span class="font-semibold text-start"> {{ button.School_name }}</span>
+          <span class="font-semibold text-start">
+            {{ button.School_name }}</span
+          >
         </div>
         <!-- Dropdown for departments -->
-          <div class="bg-white min-w-[300px]"  v-if="scl === button.id && button.departments.length > 0">
-            <ul class="pl-12 text-left ">
-              <li class="py-1" v-for="(department, index) in button.departments" :key="index">
-                <button @click="handleOptionClicksetContent(department.id)">
-                  * {{ department.Department_name }}
-                </button>                
-              </li>
-            </ul>
-          </div>
+        <div
+          class="bg-white min-w-[300px]"
+          v-if="scl === button.id && button.departments.length > 0"
+        >
+          <ul class="pl-12 text-left">
+            <li
+              class="py-1"
+              v-for="(department, index) in button.departments"
+              :key="index"
+            >
+              <button @click="handleOptionClicksetContent(department.id)">
+                * {{ department.Department_name }}
+              </button>
+            </li>
+          </ul>
+        </div>
       </button>
     </div>
   </div>
 </template>
 
 <script setup>
-const { closeSidebar, isSidebarOpen, handleOptionClicksetScl,handleOptionClicksetContent, data,scl, btnStyleIndex } =
-  defineProps([
-    "isSidebarOpen",
-    "handleOptionClicksetScl",
-    "handleOptionClicksetContent",
-    "closeSidebar",
-    "data",
-    "scl",
-    "btnStyleIndex",
-  ]);
+const {
+  closeSidebar,
+  isSidebarOpen,
+  handleOptionClicksetScl,
+  handleOptionClicksetContent,
+  data,
+  scl,
+  btnStyleIndex,
+} = defineProps([
+  "isSidebarOpen",
+  "handleOptionClicksetScl",
+  "handleOptionClicksetContent",
+  "closeSidebar",
+  "data",
+  "scl",
+  "btnStyleIndex",
+]);
 </script>
+
+<style scoped lang="scss">
+/* Max width 767px */
+@media only screen and (max-width: 767px) {
+  .btn-pr {
+    &.px-5 {
+      padding-right: 10px !important;
+      padding-left: 15px !important;
+    }
+  }
+  .pl-12 {
+    padding-left: 30px;
+  }
+  button:not(:disabled) {
+    text-align: left;
+  }
+  .min-w-\[300px\] {
+    min-width: auto;
+  }
+}
+</style>

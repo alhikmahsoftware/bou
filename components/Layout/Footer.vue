@@ -8,7 +8,7 @@
       <LayoutFooterLinks title="BOU GOOGLE MAP" :location="true" />
     </div>
   </div>
-  <p class="py-2 text-center text-sm pbr-65">
+  <p class="py-2 text-center text-sm pbr-50px">
     © 2024 Bangladesh Open University . Develop & support By
     <a
       class="text-lightblue font-medium hover:underline"
@@ -26,8 +26,8 @@ import { importantLinks, resourceLinks } from "~/data/footer-data";
 <style lang="scss" scoped>
 /* Max width 767px */
 @media only screen and (max-width: 767px) {
-  .pbr-65 {
-    padding-bottom: 65px;
+  .pbr-50px {
+    padding-bottom: 50px !important;
   }
 }
 </style>

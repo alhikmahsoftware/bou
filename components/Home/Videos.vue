@@ -107,5 +107,8 @@ const setVdoPlay = (embedded_url, index) => {
     padding-top: 3rem;
     padding-bottom: 3rem;
   }
+  .gap-4 {
+    gap: 0.5rem !important;
+  }
 }
 </style>
